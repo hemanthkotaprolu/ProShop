@@ -17,7 +17,6 @@ const App = () => {
                         <Route
                             path="/product/:id"
                             element={<ProductScreen />}
-                            exact
                         />
                     </Routes>
                 </Container>
