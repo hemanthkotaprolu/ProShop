@@ -20,7 +20,7 @@ const ProductScreen = () => {
 
         fetchProduct();
         // eslint-disable-next-line
-    }, []);
+    }, [params]);
 
     return (
         <>

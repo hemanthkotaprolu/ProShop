@@ -3,15 +3,19 @@
     "version": "1.0.0",
     "description": "MERN shopping cart app",
     "main": "server.js",
+    "type": "module",
     "dependencies": {
         "classnames": "^2.3.1",
+        "concurrently": "^7.4.0",
         "csstype": "^3.1.0",
         "dequal": "^2.0.3",
         "dom-helpers": "^5.2.1",
+        "dotenv": "^16.0.3",
         "express": "^4.18.1",
         "invariant": "^2.2.4",
         "js-tokens": "^4.0.0",
         "loose-envify": "^1.4.0",
+        "mongoose": "^6.6.5",
         "object-assign": "^4.1.1",
         "prop-types": "^15.8.1",
         "prop-types-extra": "^1.1.1",
@@ -27,7 +31,10 @@
         "warning": "^4.0.3"
     },
     "scripts": {
-        "start": "node backend/server"
+        "start": "node backend/server",
+        "server": "nodemon backend/server",
+        "client": "npm start --prefix frontend",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
     },
     "author": "KOTAPROLU HEMANTH",
     "license": "MIT"
